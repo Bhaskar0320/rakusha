@@ -1,8 +1,5 @@
 
 
-
-
-
 const express = require('express');
 const mysql = require('mysql2');
 const cors = require('cors');
@@ -22,19 +19,23 @@ app.use(express.json());
 app.use('/uploads', express.static('uploads'));
 
 // Database connection
-const db = mysql.createConnection({
+const db = mysql.createPool({
     host: process.env.DB_HOST || 'localhost',
     user: process.env.DB_USER || 'root',
     password: process.env.DB_PASSWORD,
-    database: process.env.DB_NAME || 'sebi_website'
+    database: process.env.DB_NAME || 'sebi_website',
+    waitForConnections: true,
+    connectionLimit: 10,
+    queueLimit: 0
 });
 
-db.connect((err) => {
+db.getConnection((err, connection) => {
     if (err) {
-        console.error('Database connection failed:', err);
-        return;
+        console.error('❌ Database connection failed:', err);
+    } else {
+        console.log('✅ Connected to MySQL database');
+        connection.release(); // release the test connection
     }
-    console.log('Connected to MySQL database');
 });
 
 // File upload configuration
@@ -438,13 +439,13 @@ app.delete('/api/newsletter/subscribers/:id', verifyToken, (req, res) => {
 });
 
 // ====== Serve Frontend Build ======
-const path = require('path');
+
 
 app.use(express.static(path.join(__dirname, '../frontend/build')));
-
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '../frontend/build/index.html'));
+app.get(/.*/, (req, res) => {
+  res.sendFile(path.resolve(__dirname, '../frontend/build/index.html'));
 });
+
 
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
