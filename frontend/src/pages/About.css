@@ -26,15 +26,17 @@
 }
 
 .about-section {
-  margin-bottom: 60px;
+  margin-bottom: 10px;
 }
 
 .about-section h2 {
+  text-align: center;
   font-size: 2rem;
   color: #2c3e50;
+  margin-top: 10px;
   margin-bottom: 20px;
-  border-left: 4px solid #3498db;
-  padding-left: 15px;
+  border-left: 5px solid #3498db;
+  padding-left: 50px;
 }
 
 .about-section p {
@@ -43,6 +45,145 @@
   color: #555;
   margin-bottom: 15px;
 }
+
+/* Timeline container */
+.expert-timeline {
+  position: relative;
+  max-width: 1100px;
+  margin: 80px auto;
+  padding: 0 20px;
+}
+
+.expert-timeline::after {
+  content: "";
+  position: absolute;
+  width: 4px;
+  background: linear-gradient(180deg, #667eea, #764ba2);
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -2px;
+}
+
+/* Each timeline item */
+.expert-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  margin-bottom: 80px;
+}
+
+/* Common styles for both sides */
+.expert-content,
+.expert-photo {
+  width: 45%;
+}
+
+/* Circular photo styling */
+.expert-photo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.expert-photo img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid #764ba2;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.expert-photo img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+/* Left & Right alignment */
+.expert-item.left .expert-content {
+  text-align: left;
+  order: 2;
+}
+
+.expert-item.left .expert-photo {
+  order: 1;
+}
+
+.expert-item.right .expert-content {
+  text-align: left;
+  order: 1;
+}
+
+.expert-item.right .expert-photo {
+  order: 2;
+}
+
+/* Content Card Design */
+.expert-content {
+  background: #f8f9fa;
+  padding: 25px 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.expert-content:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
+}
+
+.expert-content h3 {
+  color: #2c3e50;
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+}
+
+.expert-content h4 {
+  color: #764ba2;
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+}
+
+.expert-content p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.7;
+  margin-bottom: 10px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .expert-timeline::after {
+    left: 20px;
+  }
+
+  .expert-item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .expert-photo,
+  .expert-content {
+    width: 100%;
+  }
+
+  .expert-content {
+    margin-top: 20px;
+  }
+
+  .expert-photo img {
+    width: 250px;
+    height: 250px;
+  }
+}
+
+
+
 
 .features-grid {
   display: grid;
@@ -58,6 +199,7 @@
   text-align: center;
   transition: transform 0.3s, box-shadow 0.3s;
 }
+
 
 .feature-card:hover {
   transform: translateY(-10px);

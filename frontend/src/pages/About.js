@@ -1,94 +1,4 @@
-// import React from 'react';
-// import Navbar from '../components/Navbar';
-// import Footer from '../components/Footer';
-// import './About.css';
 
-// const About = () => {
-//   return (
-//     <div className="about-page">
-//       <Navbar />
-      
-//       <div className="about-header">
-//         <h1>About Us</h1>
-//         <p>Your Trusted SEBI Registered Financial Partner</p>
-//       </div>
-
-//       <div className="about-content">
-//         <section className="about-section">
-//           <h2>Who We Are</h2>
-//           <p>
-//             We are a SEBI registered financial services company dedicated to providing
-//             comprehensive investment advisory and portfolio management services. With years
-//             of expertise in the Indian financial markets, we help our clients achieve their
-//             financial goals through strategic planning and expert guidance.
-//           </p>
-//           <p>
-//             Our team of certified professionals ensures that every investment decision
-//             is backed by thorough research and analysis, keeping your financial security
-//             as our top priority.
-//           </p>
-//         </section>
-
-//         <section className="about-section">
-//           <h2>Our Mission</h2>
-//           <p>
-//             To empower individuals and businesses with expert financial guidance and 
-//             innovative investment solutions that create lasting wealth and financial security.
-//           </p>
-//         </section>
-
-//         <section className="about-section">
-//           <h2>Our Vision</h2>
-//           <p>
-//             To be India's most trusted and customer-centric financial services provider,
-//             known for integrity, expertise, and exceptional results.
-//           </p>
-//         </section>
-
-//         <section className="about-section">
-//           <h2>Why Choose Us</h2>
-//           <div className="features-grid">
-//             <div className="feature-card">
-//               <i className="fas fa-certificate"></i>
-//               <h3>SEBI Registered</h3>
-//               <p>Fully compliant with SEBI regulations and guidelines</p>
-//             </div>
-//             <div className="feature-card">
-//               <i className="fas fa-users"></i>
-//               <h3>Expert Team</h3>
-//               <p>Certified professionals with years of market experience</p>
-//             </div>
-//             <div className="feature-card">
-//               <i className="fas fa-shield-alt"></i>
-//               <h3>Secure & Transparent</h3>
-//               <p>Complete transparency in all our operations</p>
-//             </div>
-//             <div className="feature-card">
-//               <i className="fas fa-chart-line"></i>
-//               <h3>Proven Track Record</h3>
-//               <p>Consistent results and satisfied clients</p>
-//             </div>
-//           </div>
-//         </section>
-
-//         <section className="about-section">
-//           <h2>Our Values</h2>
-//           <ul className="values-list">
-//             <li><strong>Integrity:</strong> We maintain the highest ethical standards in all our dealings</li>
-//             <li><strong>Excellence:</strong> We strive for excellence in every service we provide</li>
-//             <li><strong>Client-First:</strong> Your financial success is our primary goal</li>
-//             <li><strong>Innovation:</strong> We continuously adapt to market changes and innovations</li>
-//             <li><strong>Transparency:</strong> Complete openness in our processes and recommendations</li>
-//           </ul>
-//         </section>
-//       </div>
-
-//       <Footer />
-//     </div>
-//   );
-// };
-
-// export default About;
 
 
 
@@ -124,7 +34,7 @@ const About = () => {
           </p>
         </section>
 
-        <section className="about-section">
+        {/* <section className="about-section">
           <h2>Our Experts</h2>
 
           <div className="expert-card">
@@ -187,7 +97,81 @@ const About = () => {
               futures trading arena.
             </p>
           </div>
-        </section>
+        </section> */}
+
+<section className="about-section">
+  <h2>Our Experts</h2>
+
+  <div className="expert-timeline">
+
+    {/* Expert 1 */}
+    <div className="expert-item left">
+      <div className="expert-photo">
+        <img src="/images/experts/google.png" alt="Ravi Kumar Sharma" />
+      </div>
+      <div className="expert-content">
+        <h3>Ravi Kumar Sharma</h3>
+        <h4>Strategy, Finance, and Advanced Trading</h4>
+        <p>
+          Ravi Kumar Sharma is a SEBI-registered Research Analyst with over 15 years of experience in options trading,
+          strategy, and risk management. He holds dual Master’s degrees in Finance and Commerce, and a Fellowship from PwC,
+          the Government of Chhattisgarh, and the US Consulates.
+        </p>
+        <p>
+          His expertise includes financial modeling, hedging, and market timing using Black-Scholes and binomial pricing models.
+        </p>
+      </div>
+    </div>
+
+    {/* Expert 2 */}
+    <div className="expert-item right">
+      <div className="expert-content">
+        <h3>Rajeev Sinha</h3>
+        <h4>Capital Market Veteran & Valuation Expert</h4>
+        <p>
+          Rajeev Sinha brings 20+ years of experience in valuation, portfolio management, and investment strategies.
+          An MBA from BHU, he integrates macroeconomic and geopolitical insights into capital market forecasting.
+        </p>
+      </div>
+      <div className="expert-photo">
+        <img src="/images/experts/google.png" alt="Rajeev Sinha" />
+      </div>
+    </div>
+
+    {/* Expert 3 */}
+    <div className="expert-item left">
+      <div className="expert-photo">
+        <img src="/images/experts/google.png" alt="Ashish Nigam" />
+      </div>
+      <div className="expert-content">
+        <h3>Ashish Nigam</h3>
+        <h4>Options Strategist & Market Forecaster</h4>
+        <p>
+          With 20+ years in options and pair trading, Ashish combines quantitative analysis with real-world insights
+          to craft predictive models that identify market shifts early.
+        </p>
+      </div>
+    </div>
+
+    {/* Expert 4 */}
+    <div className="expert-item right">
+      <div className="expert-content">
+        <h3>Biranchi Narayan Mahapatra</h3>
+        <h4>Futures Trading Specialist</h4>
+        <p>
+          An NIT Rourkela graduate and ZISHI Level 5 certified trader, Biranchi specializes in US Futures (Nasdaq, COMEX)
+          and is known for precision-based day trading with advanced risk management.
+        </p>
+      </div>
+      <div className="expert-photo">
+        <img src="/images/experts/google.png" alt="Biranchi Narayan Mahapatra" />
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
 
         <section className="about-section">
           <h2>Our Mission</h2>
