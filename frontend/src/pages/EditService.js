@@ -20,7 +20,7 @@ const EditService = () => {
 
   const fetchService = async () => {
     try {
-      const response = await axios.get(`http://localhost:5000/api/services/${id}`);
+      const response = await axios.get(`https://rakusharma.onrender.com/api/services/${id}`);
       setFormData({
         title: response.data.title,
         description: response.data.description,
@@ -45,7 +45,7 @@ const EditService = () => {
 
     try {
       const token = localStorage.getItem('token');
-      await axios.put(`http://localhost:5000/api/services/${id}`, formData, {
+      await axios.put(`https://rakusharma.onrender.com/api/services/${id}`, formData, {
         headers: { Authorization: `Bearer ${token}` }
       });
       alert('Service updated successfully!');

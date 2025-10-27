@@ -54,7 +54,7 @@
 
 //   const fetchBlog = async () => {
 //     try {
-//       const response = await axios.get(`http://localhost:5000/api/blogs/${id}`);
+//       const response = await axios.get(`https://rakusharma.onrender.com/api/blogs/${id}`);
 //       setFormData({
 //         title: response.data.title,
 //         author: response.data.author,
@@ -99,7 +99,7 @@
 //         formDataToSend.append('image', image);
 //       }
 
-//       await axios.put(`http://localhost:5000/api/blogs/${id}`, formDataToSend, {
+//       await axios.put(`https://rakusharma.onrender.com/api/blogs/${id}`, formDataToSend, {
 //         headers: {
 //           'Authorization': `Bearer ${token}`,
 //           'Content-Type': 'multipart/form-data'
@@ -155,7 +155,7 @@
 //             {currentImage && !image && (
 //               <div className="current-image">
 //                 <p>Current Image:</p>
-//                 <img src={`http://localhost:5000${currentImage}`} alt="Current" />
+//                 <img src={`https://rakusharma.onrender.com${currentImage}`} alt="Current" />
 //               </div>
 //             )}
 //             <input
@@ -234,7 +234,7 @@ const EditBlog = () => {
 
   const fetchBlog = async () => {
     try {
-      const response = await axios.get(`http://localhost:5000/api/blogs/${id}`);
+      const response = await axios.get(`https://rakusharma.onrender.com/api/blogs/${id}`);
       setFormData({
         title: response.data.title,
         author: response.data.author,
@@ -316,7 +316,7 @@ const EditBlog = () => {
         formDataToSend.append('image', image);
       }
 
-      await axios.put(`http://localhost:5000/api/blogs/${id}`, formDataToSend, {
+      await axios.put(`https://rakusharma.onrender.com/api/blogs/${id}`, formDataToSend, {
         headers: {
           'Authorization': `Bearer ${token}`,
           'Content-Type': 'multipart/form-data'
@@ -372,7 +372,7 @@ const EditBlog = () => {
             {currentImage && !image && (
               <div className="current-image">
                 <p>Current Image:</p>
-                <img src={`http://localhost:5000${currentImage}`} alt="Current" />
+                <img src={`https://rakusharma.onrender.com${currentImage}`} alt="Current" />
               </div>
             )}
             <input

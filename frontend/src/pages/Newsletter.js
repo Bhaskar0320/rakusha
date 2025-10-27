@@ -27,7 +27,7 @@ const Newsletter = () => {
     setSuccess(false);
 
     try {
-      const response = await axios.post('http://localhost:5000/api/newsletter/subscribe', formData);
+      const response = await axios.post('https://rakusharma.onrender.com/api/newsletter/subscribe', formData);
       setSuccess(true);
       setFormData({ name: '', email: '' });
       

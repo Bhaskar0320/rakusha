@@ -79,7 +79,7 @@
 //         formDataToSend.append('image', image);
 //       }
 
-//       await axios.post('http://localhost:5000/api/blogs', formDataToSend, {
+//       await axios.post('https://rakusharma.onrender.com/api/blogs', formDataToSend, {
 //         headers: {
 //           'Authorization': `Bearer ${token}`,
 //           'Content-Type': 'multipart/form-data'
@@ -272,7 +272,7 @@ const AddBlog = () => {
         formDataToSend.append('image', image);
       }
 
-      await axios.post('http://localhost:5000/api/blogs', formDataToSend, {
+      await axios.post('https://rakusharma.onrender.com/api/blogs', formDataToSend, {
         headers: {
           'Authorization': `Bearer ${token}`,
           'Content-Type': 'multipart/form-data'

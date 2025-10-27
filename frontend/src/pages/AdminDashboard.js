@@ -19,7 +19,7 @@ const AdminDashboard = () => {
 
   const fetchServices = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/api/services');
+      const response = await axios.get('https://rakusharma.onrender.com/api/services');
       setServices(response.data);
     } catch (error) {
       console.error('Error fetching services:', error);
@@ -28,7 +28,7 @@ const AdminDashboard = () => {
 
   const fetchBlogs = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/api/blogs');
+      const response = await axios.get('https://rakusharma.onrender.com/api/blogs');
       setBlogs(response.data);
     } catch (error) {
       console.error('Error fetching blogs:', error);
@@ -38,7 +38,7 @@ const AdminDashboard = () => {
   const fetchSubscribers = async () => {
     try {
       const token = localStorage.getItem('token');
-      const response = await axios.get('http://localhost:5000/api/newsletter/subscribers', {
+      const response = await axios.get('https://rakusharma.onrender.com/api/newsletter/subscribers', {
         headers: { Authorization: `Bearer ${token}` }
       });
       setSubscribers(response.data);
@@ -51,7 +51,7 @@ const AdminDashboard = () => {
     if (window.confirm('Are you sure you want to delete this service?')) {
       try {
         const token = localStorage.getItem('token');
-        await axios.delete(`http://localhost:5000/api/services/${id}`, {
+        await axios.delete(`https://rakusharma.onrender.com/api/services/${id}`, {
           headers: { Authorization: `Bearer ${token}` }
         });
         fetchServices();
@@ -67,7 +67,7 @@ const AdminDashboard = () => {
     if (window.confirm('Are you sure you want to delete this blog?')) {
       try {
         const token = localStorage.getItem('token');
-        await axios.delete(`http://localhost:5000/api/blogs/${id}`, {
+        await axios.delete(`https://rakusharma.onrender.com/api/blogs/${id}`, {
           headers: { Authorization: `Bearer ${token}` }
         });
         fetchBlogs();

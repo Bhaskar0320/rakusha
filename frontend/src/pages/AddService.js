@@ -26,7 +26,7 @@ const AddService = () => {
 
     try {
       const token = localStorage.getItem('token');
-      await axios.post('http://localhost:5000/api/services', formData, {
+      await axios.post('https://rakusharma.onrender.com/api/services', formData, {
         headers: { Authorization: `Bearer ${token}` }
       });
       alert('Service added successfully!');

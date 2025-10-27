@@ -55,7 +55,7 @@ const Home = () => {
 
   const fetchServices = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/api/services');
+      const response = await axios.get('https://rakusharma.onrender.com/api/services');
       setServices(response.data.slice(0, 3));
     } catch (error) {
       console.error('Error fetching services:', error);
@@ -64,7 +64,7 @@ const Home = () => {
 
   const fetchBlogs = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/api/blogs');
+      const response = await axios.get('https://rakusharma.onrender.com/api/blogs');
       setBlogs(response.data.slice(0, 3));
     } catch (error) {
       console.error('Error fetching blogs:', error);
@@ -157,7 +157,7 @@ const Home = () => {
             {blogs.map((blog) => (
               <div key={blog.id} className="blog-card">
                 {blog.image_url && (
-                  <img src={`http://localhost:5000${blog.image_url}`} alt={blog.title} />
+                  <img src={`https://rakusharma.onrender.com${blog.image_url}`} alt={blog.title} />
                 )}
                 <div className="blog-card-content">
                   <h3>{blog.title}</h3>

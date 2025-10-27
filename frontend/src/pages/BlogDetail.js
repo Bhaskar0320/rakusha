@@ -17,7 +17,7 @@ const BlogDetail = () => {
 
   const fetchBlog = async () => {
     try {
-      const response = await axios.get(`http://localhost:5000/api/blogs/${id}`);
+      const response = await axios.get(`https://rakusharma.onrender.com/api/blogs/${id}`);
       setBlog(response.data);
       setLoading(false);
     } catch (error) {
@@ -65,7 +65,7 @@ const BlogDetail = () => {
         <article className="blog-detail-content">
           {blog.image_url && (
             <img 
-              src={`http://localhost:5000${blog.image_url}`} 
+              src={`https://rakusharma.onrender.com${blog.image_url}`} 
               alt={blog.title}
               className="blog-detail-image"
             />

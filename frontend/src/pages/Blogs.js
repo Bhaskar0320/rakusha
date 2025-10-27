@@ -15,7 +15,7 @@ const Blogs = () => {
 
   const fetchBlogs = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/api/blogs');
+      const response = await axios.get('https://rakusharma.onrender.com/api/blogs');
       setBlogs(response.data);
     } catch (error) {
       console.error('Error fetching blogs:', error);
@@ -35,7 +35,7 @@ const Blogs = () => {
         {blogs.map((blog) => (
           <div key={blog.id} className="blog-card-full">
             {blog.image_url && (
-              <img src={`http://localhost:5000${blog.image_url}`} alt={blog.title} />
+              <img src={`https://rakusharma.onrender.com${blog.image_url}`} alt={blog.title} />
             )}
             <div className="blog-card-body">
               <h2>{blog.title}</h2>
