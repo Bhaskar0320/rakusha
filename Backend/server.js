@@ -283,7 +283,7 @@ app.post('/api/contact', (req, res) => {
             // Send email to receiver
             const receiverMailOptions = {
                 from: process.env.EMAIL_USER,
-                to: 'receiver@example.com', // Change this to receiver's email
+                to: 'rsharma@rakusha.com', // Change this to receiver's email
                 subject: 'New Contact Form Submission',
                 html: `
                     <h3>New Contact Form Submission</h3>
